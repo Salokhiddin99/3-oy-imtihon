@@ -1,0 +1,449 @@
+.showcase {
+    width: 100%;
+    padding-top: 100px;
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+    background: #121212;
+    padding-bottom: 100px;
+
+    &-site {
+        @include flex;
+    }
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__minititle {
+            @include link;
+            color: $text-gray;
+            margin-bottom: 8px
+        }
+
+        &__title {
+            margin-bottom: 16px;
+            @include title;
+            color: $white;
+        }
+
+        &__subtitle {
+            @include subtitle;
+            color: $text-dark;
+        }
+    }
+
+    &-servise {
+        @include flex;
+        margin-top: 48px;
+
+        &__link {
+            margin-left: 20px;
+            vertical-align: middle;
+            color: $main-background;
+            border: 1px solid $main-background;
+            border-radius: 50%;
+            padding: 10px 0;
+
+            .fa-arrow-right-long {
+                margin-left: 2px;
+            }
+
+            &s {
+                background-color: $main-background;
+                text-align: center;
+                padding: 15px;
+                border-radius: 50%;
+                @include title-card;
+                color: $white;
+            }
+        }
+    }
+
+    &-img {
+        max-width: 505px;
+        max-height: 513px;
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    &-img {
+        max-width: 350px;
+        max-height: 400px;
+    }
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 25px;
+    }
+
+    &-text {
+        margin-bottom: 50px;
+
+        &__title {
+            @include mini-title;
+            color: $white;
+        }
+
+        &__subtitle {
+            @include subtitle;
+            color: $text-gray;
+            max-width: 800px;
+        }
+    }
+
+    &-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &s {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+.card-box {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    width: 392px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &__title {
+        font-family: 'STIX Two Text';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 45px;
+        color: $white;
+    }
+
+    &__subtitle {
+        @include subtitle;
+        color: $text-gray;
+    }
+
+    &s {
+        margin-left: 20px;
+    }
+}
+
+.partner {
+    width: 392px;
+    height: 119px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &-right {
+        margin-left: 20px
+    }
+
+    &-card {
+        width: 60%;
+        height: 55%;
+    }
+
+    &s {
+
+        &-cards {
+            @include flex;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.box-card {
+    display: none;
+}
+
+@media (max-width:1180px) {
+    .hero {
+        &-img {
+            max-width: 300px;
+            max-height: 347px;
+        }
+
+        &-text__subtitle {
+            max-width: 633px;
+        }
+    }
+
+    .card-box {
+        width: 320px;
+    }
+
+    .partner {
+        width: 320px;
+
+        &-card {
+            width: 60%;
+            height: 40%;
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .showcase {
+        &-text__title {
+            font-size: 44px;
+        }
+
+        &-img {
+            max-width: 350px;
+            max-height: 391px;
+        }
+    }
+}
+
+@media (max-width:960px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+
+        &-img {
+            display: none;
+        }
+
+        &-box {
+            margin-left: 0;
+        }
+
+        .card-box {
+            width: 354px;
+        }
+
+        .partner {
+            width: 354px;
+
+            &-card {
+                width: 66%;
+                height: 45%;
+            }
+        }
+    }
+
+}
+
+@media (max-width:768px) {
+    .showcase {
+        &-text__title {
+            font-size: 40px;
+        }
+
+        &-img {
+            max-width: 250px;
+            max-height: 250px;
+        }
+    }
+
+    .hero {
+        .card-box {
+            width: 300px;
+        }
+
+        &-text__title {
+            font-size: 32px;
+        }
+
+        .partner {
+            width: 300px;
+
+            &-card {
+                width: 55%;
+                height: 35%;
+            }
+        }
+    }
+
+    .box-card {
+        display: block;
+    }
+}
+
+@media (max-width:650px) {
+    .showcase {
+        &-text {
+            text-align: center;
+            display: flex;
+            align-items: center;
+
+            &__title {
+                font-size: 38px;
+            }
+        }
+
+        &-servise {
+            display: flex;
+            flex-direction: column;
+
+            &__link {
+                margin-top: 30px;
+            }
+        }
+
+        &-img {
+            display: none;
+        }
+    }
+
+    .hero {
+        .card-box {
+            width: 210px;
+        }
+
+        &-box {
+            &__title {
+                font-size: 28px;
+            }
+
+            &__subtitle {
+                font-size: 14px;
+            }
+
+            display: flex;
+            align-items: center;
+        }
+
+        &-text__title {
+            font-size: 28px;
+        }
+
+        .partner {
+            width: 440px;
+
+            &s-cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &-right {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            &-card {
+                width: 65%;
+                height: 45%;
+            }
+        }
+    }
+
+}
+
+@media (max-width:480px) {
+    .hero {
+        &-text {
+            &__title {
+                font-size: 24px;
+            }
+
+            &__subtitle {
+                font-size: 14px;
+            }
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-box {
+            &s {
+                margin-left: 0;
+            }
+            width: 320px;
+            @include flex;
+            justify-content: flex-start;
+            &__title {
+                font-size: 24px;
+            }
+            &__subtitle {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+        .partner {
+            width: 320px;
+
+            &s-cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &-right {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            &-card {
+                width: 65%;
+                height: 45%;
+            }
+        }
+
+    }
+    .box-card {
+        display: none;
+    }
+    br {
+        display: none;
+    }
+}
+
+@media (max-width:360px) {
+    .showcase-text__title {
+        font-size: 30px;
+    }
+    .hero {
+        &-text {
+            &__title {
+                font-size: 22px;
+            }
+
+            &__subtitle {
+                font-size: 14px;
+            }
+        }
+
+        .card-box {
+            &s {
+                margin-left: 0;
+            }
+            width: 270px;
+            &__title {
+                font-size: 22px;
+            }
+        }
+        .partner {
+            width: 270px;
+        }
+    }
+}
