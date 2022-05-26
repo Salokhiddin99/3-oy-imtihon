@@ -1,0 +1,86 @@
+.service {
+    padding-top: 160px;
+    background: #121212;
+    padding-bottom: 160px;
+    &-title {
+        color: $white;
+    }
+    &-card {
+        margin-right: 20px;
+        width: 598px;
+        height: 289px;
+        display: flex;
+        align-items: center;
+        opacity: 0.5;
+        &:hover {
+            opacity: 1;
+            transition: 0.5s ease-in;
+        }
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 289px;
+            height: 289px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        &__subtitle {
+            position: relative;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.04);
+            height: 289px;
+            width: 309px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &--img {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+            &--title {
+                @include subtitle-jirniy;
+                color: $white;
+            }
+            &--subtitle {
+                margin-top: 5px;
+                @include subtitle-milkiy;
+                color: $text-gray;
+            }
+        }
+        
+    }
+}
+@media (max-width:1000px) {
+    .service {
+        &-card {
+            width: 470px;
+        }
+    }
+}
+@media (max-width:768px) {
+    .service {
+        &-card {
+            width: 728px;
+        }
+    }
+}
+@media (max-width:650px) {
+    .service-card {
+        width: 440px;
+    }
+}
+@media (max-width:360px) {
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        width: 270px;
+        &__title {
+            width: 270px;
+        }
+        &__subtitle {
+            width: 270px;
+        }
+    }
+}

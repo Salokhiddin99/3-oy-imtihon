@@ -1,0 +1,16 @@
+.order {
+    padding: 100px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url('/images/background-6.png');
+    &-title {
+        font-size: 38px;
+    }
+    &-subtitle {
+        color: $white;
+        opacity: 0.75;
+    }
+    &-link {
+        background-color: $section-background;
+    }
+}
