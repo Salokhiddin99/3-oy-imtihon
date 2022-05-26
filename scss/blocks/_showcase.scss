@@ -39,24 +39,42 @@
         margin-top: 48px;
 
         &__link {
+            position: relative;
             margin-left: 20px;
             vertical-align: middle;
             color: $main-background;
             border: 1px solid $main-background;
             border-radius: 50%;
-            padding: 10px 0;
+            padding: 10px 20px 10px 15px;
 
-            .fa-arrow-right-long {
-                margin-left: 2px;
+            &--icon {
+                position: absolute;
+                right: -15px;
+                bottom: 15px;
             }
 
             &s {
+                position: relative;
                 background-color: $main-background;
                 text-align: center;
                 padding: 15px;
                 border-radius: 50%;
                 @include title-card;
                 color: $white;
+                &:hover {
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        content: "";
+                        border: 1px solid #FFFFFF;
+                        transform: matrix(0.99, -0.11, 0.11, 0.99, 0, 0);
+                        width: 260px;
+                        height: 80px;
+                        border-radius: 50%;
+                        color: transparent;
+                    }
+                }
             }
         }
     }
@@ -378,17 +396,21 @@
             &s {
                 margin-left: 0;
             }
+
             width: 320px;
             @include flex;
             justify-content: flex-start;
+
             &__title {
                 font-size: 24px;
             }
+
             &__subtitle {
                 margin-left: 10px;
                 font-size: 14px;
             }
         }
+
         .partner {
             width: 320px;
 
@@ -410,9 +432,11 @@
         }
 
     }
+
     .box-card {
         display: none;
     }
+
     br {
         display: none;
     }
@@ -422,6 +446,7 @@
     .showcase-text__title {
         font-size: 30px;
     }
+
     .hero {
         &-text {
             &__title {
@@ -437,11 +462,14 @@
             &s {
                 margin-left: 0;
             }
+
             width: 270px;
+
             &__title {
                 font-size: 22px;
             }
         }
+
         .partner {
             width: 270px;
         }
