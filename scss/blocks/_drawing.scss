@@ -7,6 +7,7 @@
     &-box {
         @include flex;
         align-items: flex-end;
+        padding-right: 15px;
     }
 
     &-text {
@@ -64,6 +65,15 @@
             top: 35%;
         }
         }
+    }
+    &-service {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        visibility: hidden;
+    }
+    &-container {
+        padding-left: 20px;
     }
 }
 
@@ -123,6 +133,40 @@
     &-subtitle {
         @include subtitle-milkiy;
         color: $text-gray;
+        display: none;
+    }
+}
+@media (max-width:880px) {
+    .drawing {
+        &-text {
+            &__title {
+                font-size: 32px;
+            }
+            &__subtitle {
+                max-width: 470px;
+            }
+        }
+    }
+}
+@media (max-width:640px) {
+    .drawing {
+        &-box {
+            display: flex;
+            justify-content: center;
+        }
+        &-text {
+            &__title {
+                font-size: 28px;
+            }
+            &__subtitle {
+                max-width: 440px;
+            }
+        }
+        &-service {
+            visibility: visible;
+        }
+    }
+    .display {
         display: none;
     }
 }
