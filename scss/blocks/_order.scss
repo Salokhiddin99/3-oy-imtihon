@@ -3,14 +3,168 @@
     background-size: cover;
     background-repeat: no-repeat;
     background: url('/images/background-6.png');
+
     &-title {
         font-size: 38px;
     }
+
     &-subtitle {
         color: $white;
         opacity: 0.75;
     }
+
     &-link {
         background-color: $section-background;
+    }
+}
+
+.footer {
+    background-color: #121212;
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    &top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-logo {
+            display: flex;
+            align-items: center;
+
+        }
+
+        &-title {
+            max-width: 515px;
+            @include subtitle-milkiy;
+            color: $text-dark;
+        }
+
+        &-about {
+            width: 289px;
+            &__title {
+                @include subtitle-milkiy;
+                color: $white;
+            }
+        }
+        &-inn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__lok {
+                @include subtitle-milkiy;
+                color: $white;
+            }
+        }
+    }
+    &-middle {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        &__end {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+    &-card {
+        display: flex;
+        flex-direction: column;
+        &__end {
+            margin-left: 30px;
+        }
+        &__link {
+            display: flex;
+            flex-direction: column;
+        }
+        &__title {
+            @include title-box;
+            color: $text-dark;
+        }
+    }
+    &-link {
+        color: $white;
+        @include subtitle-milkiy;
+        &__none {
+            display: none;
+        }
+    }
+    &-end {
+        margin-top: 50px;
+        @include flex;
+        &__title {
+            @include subtitle-milkiy;
+            color: $text-dark;
+        }
+        &__link {
+            @include subtitle-milkiy;
+            color: $white;
+        }
+
+    }
+}
+@media (max-width:950px) {
+    .footertop-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footertop-about {
+        @include flex;
+        width: auto;
+        margin-top: 30px;
+        &__title {
+            width: 229px;
+        }
+    }
+    .footertop-inn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer {
+        &-link__none {
+            display: block;
+        }
+        &-card__none {
+            display: none;
+        }
+    }
+}
+@media (max-width:768px) {
+    .footertop {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer {
+        &-middle {
+            display: flex;
+            flex-direction: column;
+            &__end {
+                margin-bottom: 30px;
+            }
+        }
+        &-card__link {
+            display: flex;
+            flex-direction: row;
+        }
+        &-end {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+@media (max-width:480px) {
+    .footertop {
+        &-about {
+            &__title {
+                width: auto;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 }
